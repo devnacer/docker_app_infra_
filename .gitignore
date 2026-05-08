@@ -1,0 +1,13 @@
+# Vue
+frontend-vuejs/node_modules
+frontend-vuejs/dist
+
+# Python
+backend-fastapi/__pycache__
+backend-fastapi/*.pyc
+
+# Environment files
+.env
+
+# Logs
+*.log
