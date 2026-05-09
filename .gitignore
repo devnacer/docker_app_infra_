@@ -6,7 +6,7 @@ frontend-vuejs/dist
 backend-fastapi/__pycache__
 backend-fastapi/*.pyc
 
-# Environment files
+# Environment variables
 .env
 
 # Logs
