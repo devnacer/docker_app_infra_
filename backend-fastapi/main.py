@@ -1,11 +1,15 @@
 from fastapi import FastAPI
+from sqlalchemy import create_engine
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello from Python backend 🚀"}
+DATABASE_URL = "mysql+pymysql://myuser:mypassword@mysql-db/myappdb"
 
-@app.get("/api/test")
-def test():
-    return {"status": "ok", "data": "Backend working"}
+engine = create_engine(DATABASE_URL)
+
+@app.get("/api/test-db")
+def test_db():
+    connection = engine.connect()
+    connection.close()
+
+    return {"database": "connected"}
